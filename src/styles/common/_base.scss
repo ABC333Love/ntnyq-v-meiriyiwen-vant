@@ -1,0 +1,34 @@
+body,
+input,
+button,
+textarea,
+select,
+option {
+  font: normal $font-size $font;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+a,
+p {
+  word-break: break-all;
+}
+
+body {
+  position: relative;
+  max-width: 750Px;
+  min-width: 320Px;
+  margin: 0 auto;
+  background-color: $common-bg-color;
+  color: $text-primary-color;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}

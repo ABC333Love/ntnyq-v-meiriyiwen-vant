@@ -1,18 +1,20 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="home flex-center">
+    <van-button @click="$router.push({ name: 'Detail', query: { date: currentDate } })"
+      type="primary">{{currentDate}}</van-button>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import { formatTime } from '@/utils'
 export default {
-  name: 'home',
-  components: {
-    HelloWorld
+  name: 'Home',
+
+  data () {
+    const currentDate = formatTime(Date.now(), 'yyyyMMdd')
+    return {
+      currentDate
+    }
   }
 }
 </script>
